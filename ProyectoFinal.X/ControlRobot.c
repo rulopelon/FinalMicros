@@ -10,9 +10,6 @@ void moverPosicion2(){
 void moverPosicion3(){
     int a;
 }
-void moverPosicion4(){
-    int a;
-}
 void moverOrigen(){
     int a;
 }

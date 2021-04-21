@@ -6,12 +6,10 @@ InicializacionPines(){
     TRISB |= (1<<PIN_SENSOR_1);
     TRISB |= (1<<PIN_SENSOR_2);
     TRISB |= (1<<PIN_SENSOR_3);
-    TRISB |= (1<<PIN_SENSOR_4);
     
     ANSELB &= ~(1<<PIN_SENSOR_1);
     ANSELB &= ~(1<<PIN_SENSOR_2);
     ANSELB &= ~(1<<PIN_SENSOR_3);
-    ANSELB &= ~(1<<PIN_SENSOR_4);
     
     TRISC &= ~(1<<PIN_SERVO_1);
     TRISC &= ~(1<<PIN_SERVO_2);

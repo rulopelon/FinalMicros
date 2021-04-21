@@ -3,7 +3,7 @@
 #define PIN_SENSOR_1 2
 #define PIN_SENSOR_2 3
 #define PIN_SENSOR_3 7
-#define PIN_SENSOR_4 13
+
 
 #define PIN_SERVO_1 7
 #define PIN_SERVO_2 8

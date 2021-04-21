@@ -51,31 +51,21 @@ int main(int argc, char** argv) {
                     posicion = 3;
                 }
             }
-             if((PORTB>>PIN_SENSOR_4)&1){
-                moverPosicion4();
-                int temperatura_act = LeerTemperatura();
-                if(temperatura_act<temperatura_global){
-                    temperatura_global = temperatura_act;
-                    posicion = 4;
-                }
-            }
+            
             //una vez se ha terminado con la compribacion de temperatura se señala la bebida más fría
             switch(posicion){
                 case 1:
                     //se muestra en los leds
                     moverPosicion1();
-                    goto FINAL;
+                    break;
                 case 2:
                     moverPosicion2();
-                    goto FINAL;
+                    break;
                 case 3:
                     moverPosicion3();
-                    goto FINAL;
-                case 4:
-                    moverPosicion4();
-                    goto FINAL;
+                    break;
             }
-            FINAL:   
+            
             while(((PORTB>>PIN_PULSADOR)&1)==1);
             moverOrigen();
             //se vuelve a empezar

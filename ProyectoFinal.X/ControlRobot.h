@@ -6,7 +6,6 @@ extern "C" {
 void moverPosicion1(void);
 void moverPosicion2(void);
 void moverPosicion3(void);
-void moverPosicion4(void);
 void moverOrigen(void);
 #ifdef	__cplusplus
 }
