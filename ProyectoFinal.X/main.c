@@ -76,7 +76,7 @@ int main(int argc, char** argv) {
                     goto FINAL;
             }
             FINAL:   
-            while(((PORTB>>PIN_PULSADOR)&1)==0);
+            while(((PORTB>>PIN_PULSADOR)&1)==1);
             moverOrigen();
             //se vuelve a empezar
         }
