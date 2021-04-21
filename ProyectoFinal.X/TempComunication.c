@@ -2,27 +2,28 @@
 
 #define DIRECCION_DISPOSITIVO 13
 #define REGISTRO 2
+
 InicializarChip(){
     InicializarI2C(1);
 }
 int LeerTemperatura(){
     int respuesta = 0;
     EnviarStart();
-    if(EnviaByte(DIRECCION_DISPOSITIVO<<1)){
+    if(EnviarByte(DIRECCION_DISPOSITIVO<<1)){
         respuesta = -1;
         EnviarStop();
     }
-    if(EnviaByte(REGISTRO)){
+    if(EnviarByte(REGISTRO)){
         respuesta = -1;
         EnviarStop();
     }
     EnviarRestart();
-    if(EnviaByte(DIRECCION_DISPOSITIVO<<1|1)){
-        EnviaStop();
+    if(EnviarByte(DIRECCION_DISPOSITIVO<<1|1)){
+        EnviarStop();
         respuesta = -1;
     }
-    respuesta = LeeByte(1);
-    EnviaStop();
+    respuesta = LeerByte(1);
+    EnviarStop();
     
     return respuesta;
     

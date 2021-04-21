@@ -21,23 +21,23 @@ void EnviarStart(void){
     while(IFS1bits.I2C1MIF == 0);
     IFS1bits.I2C1MIF = 0;
 }
-void EnviaRestart(){
+void EnviarRestart(){
     I2C1CONbits.RSEN = 1;
     while(IFS1bits.I2C1MIF);
     IFS1bits.I2C1MIF = 0;
 }
-void EnviaStop(){
+void EnviarStop(){
     I2C1CONbits.PEN = 1;
     while(IFS1bits.I2C1MIF==0);
     IFS1bits.I2C1MIF = 0;
 }
-int EnviaByte(uint8_t dato){
+int EnviarByte(uint8_t dato){
     I2C1TRN = dato;
     while(IFS1bits.I2C1MIF == 0);
     IFS1bits.I2C1MIF = 0;
     return I2C1STATbits.ACKSTAT;
 }
-uint8_t LeeByte(uint8_t ack){
+uint8_t LeerByte(uint8_t ack){
     I2C1CONbits.RCEN = 1;
     uint8_t respuesta = I2C1RCV;
     while(IFS1bits.I2C1MIF ==0);
