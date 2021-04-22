@@ -3,14 +3,15 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/Users/gonza/MPLABXProjects/ProyectoFinal.X/ControlServos.c</file>
-            <file>file:/C:/Users/gonza/MPLABXProjects/ProyectoFinal.X/I2cComunication.c</file>
-            <file>file:/C:/Users/gonza/MPLABXProjects/ProyectoFinal.X/main.c</file>
-            <file>file:/C:/Users/gonza/MPLABXProjects/ProyectoFinal.X/Retardo.h</file>
-            <file>file:/C:/Users/gonza/MPLABXProjects/ProyectoFinal.X/Pic32Ini.c</file>
-            <file>file:/C:/Users/gonza/MPLABXProjects/ProyectoFinal.X/ControlServos.h</file>
-            <file>file:/C:/Users/gonza/MPLABXProjects/ProyectoFinal.X/Pic32Ini.h</file>
-            <file>file:/C:/Users/gonza/MPLABXProjects/ProyectoFinal.X/I2cComunication.h</file>
+            <file>file:/C:/Users/gonza/MPLABXProjects/FinalMicros/ProyectoFinal.X/I2cComunication.c</file>
+            <file>file:/C:/Users/gonza/MPLABXProjects/FinalMicros/ProyectoFinal.X/ControlRobot.c</file>
+            <file>file:/C:/Users/gonza/MPLABXProjects/FinalMicros/ProyectoFinal.X/main.c</file>
+            <file>file:/C:/Users/gonza/MPLABXProjects/FinalMicros/ProyectoFinal.X/Pines.h</file>
+            <file>file:/C:/Users/gonza/MPLABXProjects/FinalMicros/ProyectoFinal.X/Retardo.c</file>
+            <file>file:/C:/Users/gonza/MPLABXProjects/FinalMicros/ProyectoFinal.X/Config.c</file>
+            <file>file:/C:/Users/gonza/MPLABXProjects/FinalMicros/ProyectoFinal.X/TempComunication.c</file>
+            <file>file:/C:/Users/gonza/MPLABXProjects/FinalMicros/ProyectoFinal.X/ControlServos.c</file>
+            <file>file:/C:/Users/gonza/MPLABXProjects/FinalMicros/ProyectoFinal.X/ControlRobot.h</file>
         </group>
     </open-files>
 </project-private>

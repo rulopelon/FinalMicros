@@ -3,3 +3,6 @@ Pin	Puerto		Oc	Servo
 8	C		2	2
 6	C		3	3
 9	C		4	4
+
+Sensores
+
