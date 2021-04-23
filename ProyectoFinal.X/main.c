@@ -23,6 +23,7 @@ int main(int argc, char** argv) {
     InicializarChip();
     InicializarServos();
     moverOrigen();
+    estado_ant = (PORTB>>PIN_PULSADOR) &1;
     while(1){
         estado_act = (PORTB>>PIN_PULSADOR) &1;
         if(estado_act!= estado_ant &&estado_act ==0){
@@ -70,7 +71,7 @@ int main(int argc, char** argv) {
             moverOrigen();
             //se vuelve a empezar
         }
-        estado_act = estado_ant;
+        estado_ant = estado_act;
     }
     return (EXIT_SUCCESS);
 }
