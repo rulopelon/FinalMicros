@@ -38,17 +38,20 @@ int EnviarByte(uint8_t dato){
     return I2C1STATbits.ACKSTAT;
 }
 uint8_t LeerByte(uint8_t ack){
+    // Se activa la recepción del dato
     I2C1CONbits.RCEN = 1;
-    uint8_t respuesta = I2C1RCV;
-    while(IFS1bits.I2C1MIF ==0);
-    IFS1bits.I2C1MIF = 0;
-    //se devuelve el ack
+    while(IFS1bits.I2C1MIF==0)
+    ; // Espera el final de la recepción
+    IFS1bits.I2C1MIF = 0; // Borro el flag
+    int dato = I2C1RCV;
     I2C1CONbits.ACKDT = ack&1;
-    I2C1CONbits.ACKEN = 1;
-    while(IFS1bits.I2C1MIF == 0);
-    IFS1bits.I2C1MIF = 0;
+    I2C1CONbits.ACKEN = 1; // Se envía el ACK
+    while(IFS1bits.I2C1MIF==0)
+    ; // Espera el envío del ACK
+    IFS1bits.I2C1MIF = 0; // Borro el flag
+
     
-    return respuesta;
+    return dato;
 }
 
 

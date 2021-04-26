@@ -16,26 +16,28 @@
 
 int estado_act, estado_ant;// para guardar el estado de los pulsadores
 int temperatura_global;
-int posicion =0;        //para almacenar que posicion tiene la bebida más fria
+int posicion =0;        //para almacenar que posicion tiene la bebida mÃ¡s fria
 int main(int argc, char** argv) {
     //se inicializan todos los pines de la placa
     InicializacionPines();
     InicializarChip();
     InicializarServos();
     moverOrigen();
+    estado_ant = (PORTB>>PIN_PULSADOR) &1;
     while(1){
         estado_act = (PORTB>>PIN_PULSADOR) &1;
-        if(estado_act!= estado_ant &&estado_act ==1){
+        if(estado_act!= estado_ant &&estado_act == 0){
             //se mueve el servo a la primera posicion
-            if((PORTC>>PIN_SENSOR_1)&1){
+            if(!((PORTC>>PIN_SENSOR_1)&1)){
                 moverPosicion1();
-                int temperatura_act = LeerTemperatura();
+                int a;
+                /*int temperatura_act = LeerTemperatura();
                 if(temperatura_act<temperatura_global){
                     temperatura_global = temperatura_act;
                     posicion = 1;
-                }
+                }*/
             }
-             if((PORTB>>PIN_SENSOR_2)&1){
+             if(!((PORTB>>PIN_SENSOR_2)&1)){
                 moverPosicion2();
                 int temperatura_act = LeerTemperatura();
                 if(temperatura_act<temperatura_global){
@@ -43,7 +45,7 @@ int main(int argc, char** argv) {
                     posicion = 2;
                 }
             }
-             if((PORTB>>PIN_SENSOR_3)&1){
+             if(!((PORTB>>PIN_SENSOR_3)&1)){
                 moverPosicion3();
                 int temperatura_act = LeerTemperatura();
                 if(temperatura_act<temperatura_global){
@@ -52,7 +54,7 @@ int main(int argc, char** argv) {
                 }
             }
             
-            //una vez se ha terminado con la compribacion de temperatura se señala la bebida más fría
+            //una vez se ha terminado con la compribacion de temperatura se seÃ±ala la bebida mÃ¡s frÃ­a
             switch(posicion){
                 case 1:
                     //se muestra en los leds
@@ -70,7 +72,7 @@ int main(int argc, char** argv) {
             moverOrigen();
             //se vuelve a empezar
         }
-        estado_act = estado_ant;
+        estado_ant = estado_act;
     }
     return (EXIT_SUCCESS);
 }

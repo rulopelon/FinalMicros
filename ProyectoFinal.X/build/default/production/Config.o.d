@@ -1,3 +1,3 @@
-build/default/production/Config.o: Config.c Pines.h
-
-Pines.h:
+build/default/production/Config.o:  \
+Config.c  \
+Pines.h 

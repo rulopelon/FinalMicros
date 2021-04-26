@@ -13,10 +13,10 @@ void InicializarServos(){
     T2CON = 0x8010; // T3 ON, Div = 2
     SYSKEY=0xAA996655;
     SYSKEY=0x556699AA;
-    RPC6R = 5; // OC1 conectado a RB15
+    RPC6R = 5; // OC4 conectado a RB15
     RPC7R = 5; // OC2 conectado a RB14
     RPC8R = 5; // OC4 conectado a RB13
-    RPC9R = 5; // OC1 conectado a RB12
+    RPC9R = 5; // OC3 conectado a RB12
     SYSKEY=0x1CA11CA1;
   
     OC1CON = 0;

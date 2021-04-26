@@ -1,8 +1,10 @@
 #include <xc.h>
-
+#include "Pines.h"
+#include "ControlServos.h"
+#include "ControlRobot.h"
 
 void moverPosicion1(){
-    int a;
+    moverServo(10,3);
 }
 void moverPosicion2(){
     int a;
@@ -11,7 +13,7 @@ void moverPosicion3(){
     int a;
 }
 void moverOrigen(){
-    int a;
+    moverServo(-10,3);
 }
   
 

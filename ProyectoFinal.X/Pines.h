@@ -14,3 +14,6 @@
 #define PIN_LED_2 1
 #define PIN_LED_3 2
 #define PIN_LED_4 3
+
+#define PIN_SCL 8
+#define PIN_SDA 9
