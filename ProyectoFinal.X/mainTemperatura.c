@@ -15,7 +15,7 @@ int main(void){
     while(1){
         
             int temperatura_act = LeerTemperatura();
-            if(temperatura_act<temperatura_global){
+            if(temperatura_act!=-1){
                 temperatura_global = temperatura_act;
             }
         

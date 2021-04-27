@@ -3,8 +3,8 @@
 #include "Pines.h"
 
 
-#define INCREMENTO_ANGULO 13.88
-#define VALOR_REPOSO 3750
+#define INCREMENTO_ANGULO 14
+#define VALOR_REPOSO 2500
 void InicializarServos(){
     T2CON = 0;
     TMR2 = 0;
@@ -40,7 +40,7 @@ void InicializarServos(){
     OC4CON = 0x8006; // OC ON, modo PWM sin faltas
 } 
 void moverServo(int angulo,int servo){
-    if(angulo >=-90 && angulo <=90){
+    if(angulo >=0 && angulo <=180){
     int tiempo = conversionAngulo(angulo);
 
         switch(servo){

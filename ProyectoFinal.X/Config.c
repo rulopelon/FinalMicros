@@ -6,6 +6,7 @@ InicializacionPines(){
     TRISB |= (1<<PIN_SENSOR_1);
     TRISB |= (1<<PIN_SENSOR_2);
     TRISB |= (1<<PIN_SENSOR_3);
+    
     TRISB &= ~(1<<PIN_SCL);
     TRISB &= ~(1<<PIN_SDA);
     LATB  |= (1<<PIN_SCL);

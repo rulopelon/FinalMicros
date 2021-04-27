@@ -31,6 +31,7 @@
       <itemPath>Retardo.c</itemPath>
       <itemPath>mainPruebaServos.c</itemPath>
       <itemPath>mainTemperatura.c</itemPath>
+      <itemPath>mainTemporizador.c</itemPath>
     </logicalFolder>
     <logicalFolder name="ExternalFiles"
                    displayName="Important Files"
@@ -267,7 +268,7 @@
         <C32Global>
         </C32Global>
       </item>
-      <item path="main.c" ex="true" overriding="false">
+      <item path="main.c" ex="false" overriding="false">
         <C32>
         </C32>
         <C32-AR>
@@ -283,7 +284,7 @@
         <C32Global>
         </C32Global>
       </item>
-      <item path="mainPruebaServos.c" ex="false" overriding="false">
+      <item path="mainPruebaServos.c" ex="true" overriding="false">
         <C32>
         </C32>
         <C32-AR>
@@ -300,6 +301,22 @@
         </C32Global>
       </item>
       <item path="mainTemperatura.c" ex="true" overriding="false">
+        <C32>
+        </C32>
+        <C32-AR>
+        </C32-AR>
+        <C32-AS>
+        </C32-AS>
+        <C32-CO>
+        </C32-CO>
+        <C32-LD>
+        </C32-LD>
+        <C32CPP>
+        </C32CPP>
+        <C32Global>
+        </C32Global>
+      </item>
+      <item path="mainTemporizador.c" ex="true" overriding="false">
       </item>
     </conf>
   </confs>

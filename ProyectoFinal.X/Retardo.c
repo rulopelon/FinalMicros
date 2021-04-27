@@ -13,7 +13,7 @@ void Retardo(int milisegundos){
         TMR3 = 0;
         T3CON= 0x8000;
         int i;
-        for(i= 0; i++; i<milisegundos){
+        for(i= 0; i<milisegundos;i++){
             while(IFS0bits.T3IF == 0);
             IFS0bits.T3IF= 0;
         }

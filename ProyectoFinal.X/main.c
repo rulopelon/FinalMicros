@@ -15,13 +15,14 @@
 
 
 int estado_act, estado_ant;// para guardar el estado de los pulsadores
-int temperatura_global;
+int temperatura_global =999999;
 int posicion =0;        //para almacenar que posicion tiene la bebida más fria
-int main(int argc, char** argv) {
+int main(void) {
     //se inicializan todos los pines de la placa
     InicializacionPines();
     InicializarChip();
     InicializarServos();
+    InicializarRetardo();
     moverOrigen();
     estado_ant = (PORTB>>PIN_PULSADOR) &1;
     while(1){
@@ -30,12 +31,12 @@ int main(int argc, char** argv) {
             //se mueve el servo a la primera posicion
             if(!((PORTC>>PIN_SENSOR_1)&1)){
                 moverPosicion1();
-                int a;
-                /*int temperatura_act = LeerTemperatura();
+                int temperatura_act = LeerTemperatura();
                 if(temperatura_act<temperatura_global){
                     temperatura_global = temperatura_act;
                     posicion = 1;
-                }*/
+                }
+                Retardo(2000);
             }
              if(!((PORTB>>PIN_SENSOR_2)&1)){
                 moverPosicion2();
@@ -44,6 +45,7 @@ int main(int argc, char** argv) {
                     temperatura_global = temperatura_act;
                     posicion = 2;
                 }
+                Retardo(2000);
             }
              if(!((PORTB>>PIN_SENSOR_3)&1)){
                 moverPosicion3();
@@ -52,8 +54,10 @@ int main(int argc, char** argv) {
                     temperatura_global = temperatura_act;
                     posicion = 3;
                 }
+                Retardo(2000);
             }
-            
+            moverOrigen();
+            Retardo(500);
             //una vez se ha terminado con la compribacion de temperatura se señala la bebida más fría
             switch(posicion){
                 case 1:

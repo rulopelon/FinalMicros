@@ -3,11 +3,10 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/F:/ProyectoFinal.X/main.c</file>
-            <file>file:/F:/ProyectoFinal.X/Pines.h</file>
-            <file>file:/F:/ProyectoFinal.X/Config.c</file>
-            <file>file:/F:/ProyectoFinal.X/ControlServos.c</file>
-            <file>file:/F:/ProyectoFinal.X/mainPruebaServos.c</file>
+            <file>file:/F:/FinalMicros-main/ProyectoFinal.X/Retardo.c</file>
+            <file>file:/F:/FinalMicros-main/ProyectoFinal.X/main.c</file>
+            <file>file:/F:/FinalMicros-main/ProyectoFinal.X/mainTemporizador.c</file>
+            <file>file:/F:/FinalMicros-main/ProyectoFinal.X/Config.c</file>
         </group>
     </open-files>
 </project-private>

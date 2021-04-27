@@ -23,7 +23,7 @@ void EnviarStart(void){
 }
 void EnviarRestart(){
     I2C1CONbits.RSEN = 1;
-    while(IFS1bits.I2C1MIF);
+    while(IFS1bits.I2C1MIF==0);
     IFS1bits.I2C1MIF = 0;
 }
 void EnviarStop(){

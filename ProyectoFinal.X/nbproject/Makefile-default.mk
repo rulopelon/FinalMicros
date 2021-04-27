@@ -57,17 +57,17 @@ OBJECTDIR=build/${CND_CONF}/${IMAGE_TYPE}
 DISTDIR=dist/${CND_CONF}/${IMAGE_TYPE}
 
 # Source Files Quoted if spaced
-SOURCEFILES_QUOTED_IF_SPACED=I2cComunication.c TempComunication.c Pic32Ini.c ControlRobot.c Config.c ControlServos.c Retardo.c mainPruebaServos.c
+SOURCEFILES_QUOTED_IF_SPACED=I2cComunication.c TempComunication.c main.c Pic32Ini.c ControlRobot.c Config.c ControlServos.c Retardo.c
 
 # Object Files Quoted if spaced
-OBJECTFILES_QUOTED_IF_SPACED=${OBJECTDIR}/I2cComunication.o ${OBJECTDIR}/TempComunication.o ${OBJECTDIR}/Pic32Ini.o ${OBJECTDIR}/ControlRobot.o ${OBJECTDIR}/Config.o ${OBJECTDIR}/ControlServos.o ${OBJECTDIR}/Retardo.o ${OBJECTDIR}/mainPruebaServos.o
-POSSIBLE_DEPFILES=${OBJECTDIR}/I2cComunication.o.d ${OBJECTDIR}/TempComunication.o.d ${OBJECTDIR}/Pic32Ini.o.d ${OBJECTDIR}/ControlRobot.o.d ${OBJECTDIR}/Config.o.d ${OBJECTDIR}/ControlServos.o.d ${OBJECTDIR}/Retardo.o.d ${OBJECTDIR}/mainPruebaServos.o.d
+OBJECTFILES_QUOTED_IF_SPACED=${OBJECTDIR}/I2cComunication.o ${OBJECTDIR}/TempComunication.o ${OBJECTDIR}/main.o ${OBJECTDIR}/Pic32Ini.o ${OBJECTDIR}/ControlRobot.o ${OBJECTDIR}/Config.o ${OBJECTDIR}/ControlServos.o ${OBJECTDIR}/Retardo.o
+POSSIBLE_DEPFILES=${OBJECTDIR}/I2cComunication.o.d ${OBJECTDIR}/TempComunication.o.d ${OBJECTDIR}/main.o.d ${OBJECTDIR}/Pic32Ini.o.d ${OBJECTDIR}/ControlRobot.o.d ${OBJECTDIR}/Config.o.d ${OBJECTDIR}/ControlServos.o.d ${OBJECTDIR}/Retardo.o.d
 
 # Object Files
-OBJECTFILES=${OBJECTDIR}/I2cComunication.o ${OBJECTDIR}/TempComunication.o ${OBJECTDIR}/Pic32Ini.o ${OBJECTDIR}/ControlRobot.o ${OBJECTDIR}/Config.o ${OBJECTDIR}/ControlServos.o ${OBJECTDIR}/Retardo.o ${OBJECTDIR}/mainPruebaServos.o
+OBJECTFILES=${OBJECTDIR}/I2cComunication.o ${OBJECTDIR}/TempComunication.o ${OBJECTDIR}/main.o ${OBJECTDIR}/Pic32Ini.o ${OBJECTDIR}/ControlRobot.o ${OBJECTDIR}/Config.o ${OBJECTDIR}/ControlServos.o ${OBJECTDIR}/Retardo.o
 
 # Source Files
-SOURCEFILES=I2cComunication.c TempComunication.c Pic32Ini.c ControlRobot.c Config.c ControlServos.c Retardo.c mainPruebaServos.c
+SOURCEFILES=I2cComunication.c TempComunication.c main.c Pic32Ini.c ControlRobot.c Config.c ControlServos.c Retardo.c
 
 
 
@@ -121,6 +121,13 @@ ${OBJECTDIR}/TempComunication.o: TempComunication.c  nbproject/Makefile-${CND_CO
 	${MP_CC}  $(MP_EXTRA_CC_PRE) -g -D__DEBUG -D__MPLAB_DEBUGGER_PK3=1  -fframe-base-loclist  -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/TempComunication.o.d" -o ${OBJECTDIR}/TempComunication.o TempComunication.c    -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD)  -mdfp="${DFP_DIR}"  
 	@${FIXDEPS} "${OBJECTDIR}/TempComunication.o.d" $(SILENT) -rsi ${MP_CC_DIR}../ 
 	
+${OBJECTDIR}/main.o: main.c  nbproject/Makefile-${CND_CONF}.mk
+	@${MKDIR} "${OBJECTDIR}" 
+	@${RM} ${OBJECTDIR}/main.o.d 
+	@${RM} ${OBJECTDIR}/main.o 
+	${MP_CC}  $(MP_EXTRA_CC_PRE) -g -D__DEBUG -D__MPLAB_DEBUGGER_PK3=1  -fframe-base-loclist  -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/main.o.d" -o ${OBJECTDIR}/main.o main.c    -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD)  -mdfp="${DFP_DIR}"  
+	@${FIXDEPS} "${OBJECTDIR}/main.o.d" $(SILENT) -rsi ${MP_CC_DIR}../ 
+	
 ${OBJECTDIR}/Pic32Ini.o: Pic32Ini.c  nbproject/Makefile-${CND_CONF}.mk
 	@${MKDIR} "${OBJECTDIR}" 
 	@${RM} ${OBJECTDIR}/Pic32Ini.o.d 
@@ -156,13 +163,6 @@ ${OBJECTDIR}/Retardo.o: Retardo.c  nbproject/Makefile-${CND_CONF}.mk
 	${MP_CC}  $(MP_EXTRA_CC_PRE) -g -D__DEBUG -D__MPLAB_DEBUGGER_PK3=1  -fframe-base-loclist  -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/Retardo.o.d" -o ${OBJECTDIR}/Retardo.o Retardo.c    -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD)  -mdfp="${DFP_DIR}"  
 	@${FIXDEPS} "${OBJECTDIR}/Retardo.o.d" $(SILENT) -rsi ${MP_CC_DIR}../ 
 	
-${OBJECTDIR}/mainPruebaServos.o: mainPruebaServos.c  nbproject/Makefile-${CND_CONF}.mk
-	@${MKDIR} "${OBJECTDIR}" 
-	@${RM} ${OBJECTDIR}/mainPruebaServos.o.d 
-	@${RM} ${OBJECTDIR}/mainPruebaServos.o 
-	${MP_CC}  $(MP_EXTRA_CC_PRE) -g -D__DEBUG -D__MPLAB_DEBUGGER_PK3=1  -fframe-base-loclist  -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/mainPruebaServos.o.d" -o ${OBJECTDIR}/mainPruebaServos.o mainPruebaServos.c    -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD)  -mdfp="${DFP_DIR}"  
-	@${FIXDEPS} "${OBJECTDIR}/mainPruebaServos.o.d" $(SILENT) -rsi ${MP_CC_DIR}../ 
-	
 else
 ${OBJECTDIR}/I2cComunication.o: I2cComunication.c  nbproject/Makefile-${CND_CONF}.mk
 	@${MKDIR} "${OBJECTDIR}" 
@@ -177,6 +177,13 @@ ${OBJECTDIR}/TempComunication.o: TempComunication.c  nbproject/Makefile-${CND_CO
 	@${RM} ${OBJECTDIR}/TempComunication.o 
 	${MP_CC}  $(MP_EXTRA_CC_PRE)  -g -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/TempComunication.o.d" -o ${OBJECTDIR}/TempComunication.o TempComunication.c    -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD)  -mdfp="${DFP_DIR}"  
 	@${FIXDEPS} "${OBJECTDIR}/TempComunication.o.d" $(SILENT) -rsi ${MP_CC_DIR}../ 
+	
+${OBJECTDIR}/main.o: main.c  nbproject/Makefile-${CND_CONF}.mk
+	@${MKDIR} "${OBJECTDIR}" 
+	@${RM} ${OBJECTDIR}/main.o.d 
+	@${RM} ${OBJECTDIR}/main.o 
+	${MP_CC}  $(MP_EXTRA_CC_PRE)  -g -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/main.o.d" -o ${OBJECTDIR}/main.o main.c    -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD)  -mdfp="${DFP_DIR}"  
+	@${FIXDEPS} "${OBJECTDIR}/main.o.d" $(SILENT) -rsi ${MP_CC_DIR}../ 
 	
 ${OBJECTDIR}/Pic32Ini.o: Pic32Ini.c  nbproject/Makefile-${CND_CONF}.mk
 	@${MKDIR} "${OBJECTDIR}" 
@@ -212,13 +219,6 @@ ${OBJECTDIR}/Retardo.o: Retardo.c  nbproject/Makefile-${CND_CONF}.mk
 	@${RM} ${OBJECTDIR}/Retardo.o 
 	${MP_CC}  $(MP_EXTRA_CC_PRE)  -g -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/Retardo.o.d" -o ${OBJECTDIR}/Retardo.o Retardo.c    -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD)  -mdfp="${DFP_DIR}"  
 	@${FIXDEPS} "${OBJECTDIR}/Retardo.o.d" $(SILENT) -rsi ${MP_CC_DIR}../ 
-	
-${OBJECTDIR}/mainPruebaServos.o: mainPruebaServos.c  nbproject/Makefile-${CND_CONF}.mk
-	@${MKDIR} "${OBJECTDIR}" 
-	@${RM} ${OBJECTDIR}/mainPruebaServos.o.d 
-	@${RM} ${OBJECTDIR}/mainPruebaServos.o 
-	${MP_CC}  $(MP_EXTRA_CC_PRE)  -g -x c -c -mprocessor=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/mainPruebaServos.o.d" -o ${OBJECTDIR}/mainPruebaServos.o mainPruebaServos.c    -DXPRJ_default=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD)  -mdfp="${DFP_DIR}"  
-	@${FIXDEPS} "${OBJECTDIR}/mainPruebaServos.o.d" $(SILENT) -rsi ${MP_CC_DIR}../ 
 	
 endif
 

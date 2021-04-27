@@ -20,7 +20,7 @@ int LeerTemperatura(){
         return respuesta;
     }
     EnviarRestart();
-    if(EnviarByte(DIRECCION_DISPOSITIVO << 1 | 1) != 0){
+    if(EnviarByte((DIRECCION_DISPOSITIVO << 1) | 1) != 0){
         EnviarStop();
         respuesta = -1;
         return respuesta;

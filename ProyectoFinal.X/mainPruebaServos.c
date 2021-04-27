@@ -48,6 +48,7 @@ int main(void)
                 t_alto = 2500;
             }
             OC2RS = t_alto;
+            
         }
         pulsador_ant = pulsador_act;
     }
