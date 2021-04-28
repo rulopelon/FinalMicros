@@ -15,7 +15,7 @@
 
 
 int estado_act, estado_ant;// para guardar el estado de los pulsadores
-int temperatura_global =999999;
+float temperatura_global =999999;
 int posicion =0;        //para almacenar que posicion tiene la bebida más fria
 int main(void) {
     //se inicializan todos los pines de la placa
@@ -32,7 +32,8 @@ int main(void) {
             if(!((PORTC>>PIN_SENSOR_1)&1)){
                 moverPosicion1();
                 int temperatura_act = LeerTemperatura();
-                if(temperatura_act<temperatura_global){
+                float temp_celsius = (temperatura_act*0.02) - 273.15;
+                if(temp_celsius<temperatura_global){
                     temperatura_global = temperatura_act;
                     posicion = 1;
                 }
@@ -41,7 +42,8 @@ int main(void) {
              if(!((PORTB>>PIN_SENSOR_2)&1)){
                 moverPosicion2();
                 int temperatura_act = LeerTemperatura();
-                if(temperatura_act<temperatura_global){
+                float temp_celsius = (temperatura_act*0.02) - 273.15;
+                if(temp_celsius<temperatura_global){
                     temperatura_global = temperatura_act;
                     posicion = 2;
                 }
@@ -50,7 +52,8 @@ int main(void) {
              if(!((PORTB>>PIN_SENSOR_3)&1)){
                 moverPosicion3();
                 int temperatura_act = LeerTemperatura();
-                if(temperatura_act<temperatura_global){
+                float temp_celsius = (temperatura_act*0.02) - 273.15;
+                if(temp_celsius<temperatura_global){
                     temperatura_global = temperatura_act;
                     posicion = 3;
                 }
