@@ -63,6 +63,9 @@ int main(void) {
             Retardo(500);
             //una vez se ha terminado con la compribacion de temperatura se señala la bebida más fría
             switch(posicion){
+                case 0:
+                    moverOrigen();
+                    break;
                 case 1:
                     //se muestra en los leds
                     moverPosicion1();
