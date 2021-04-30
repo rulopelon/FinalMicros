@@ -24,6 +24,8 @@ int main(void) {
     InicializarServos();
     InicializarRetardo();
     moverOrigen();
+    uint16_t temperatura_act;
+    float temp_celsius;
     estado_ant = (PORTB>>PIN_PULSADOR) &1;
     while(1){
         estado_act = (PORTB>>PIN_PULSADOR) &1;
@@ -31,30 +33,30 @@ int main(void) {
             //se mueve el servo a la primera posicion
             if(!((PORTC>>PIN_SENSOR_1)&1)){
                 moverPosicion1();
-                int temperatura_act = LeerTemperatura();
-                float temp_celsius = (temperatura_act*0.02) - 273.15;
+                temperatura_act = LeerTemperatura();
+                temp_celsius = (temperatura_act*0.02) - 273.15;
                 if(temp_celsius<temperatura_global){
-                    temperatura_global = temperatura_act;
+                    temperatura_global = temp_celsius;
                     posicion = 1;
                 }
                 Retardo(2000);
             }
              if(!((PORTB>>PIN_SENSOR_2)&1)){
                 moverPosicion2();
-                int temperatura_act = LeerTemperatura();
-                float temp_celsius = (temperatura_act*0.02) - 273.15;
+                temperatura_act = LeerTemperatura();
+                temp_celsius = (temperatura_act*0.02) - 273.15;
                 if(temp_celsius<temperatura_global){
-                    temperatura_global = temperatura_act;
+                    temperatura_global = temp_celsius;
                     posicion = 2;
                 }
                 Retardo(2000);
             }
              if(!((PORTB>>PIN_SENSOR_3)&1)){
                 moverPosicion3();
-                int temperatura_act = LeerTemperatura();
-                float temp_celsius = (temperatura_act*0.02) - 273.15;
+                temperatura_act = LeerTemperatura();
+                temp_celsius = (temperatura_act*0.02) - 273.15;
                 if(temp_celsius<temperatura_global){
-                    temperatura_global = temperatura_act;
+                    temperatura_global = temp_celsius;
                     posicion = 3;
                 }
                 Retardo(2000);
