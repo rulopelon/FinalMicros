@@ -1,3 +1,3 @@
-build/default/debug/ControlServos.o:  \
-ControlServos.c  \
-Pines.h 
+build/default/debug/ControlServos.o: ControlServos.c Pines.h
+
+Pines.h:

@@ -27,42 +27,51 @@ int main(void) {
     uint16_t temperatura_act;
     float temp_celsius;
     estado_ant = (PORTB>>PIN_PULSADOR) &1;
+    temperatura_act = LeerTemperatura();
     while(1){
         estado_act = (PORTB>>PIN_PULSADOR) &1;
         if(estado_act!= estado_ant &&estado_act == 0){
             //se mueve el servo a la primera posicion
             if(!((PORTC>>PIN_SENSOR_1)&1)){
                 moverPosicion1();
+                Retardo(2000);
                 temperatura_act = LeerTemperatura();
                 temp_celsius = (temperatura_act*0.02) - 273.15;
                 if(temp_celsius<temperatura_global){
                     temperatura_global = temp_celsius;
                     posicion = 1;
                 }
-                Retardo(2000);
+                moverOrigen();
+                Retardo(500);
             }
+            
+            
              if(!((PORTB>>PIN_SENSOR_2)&1)){
                 moverPosicion2();
+                Retardo(2000);
                 temperatura_act = LeerTemperatura();
                 temp_celsius = (temperatura_act*0.02) - 273.15;
                 if(temp_celsius<temperatura_global){
                     temperatura_global = temp_celsius;
                     posicion = 2;
                 }
-                Retardo(2000);
+                moverOrigen();
+                Retardo(500);
             }
+            
              if(!((PORTB>>PIN_SENSOR_3)&1)){
                 moverPosicion3();
+                Retardo(2000);
                 temperatura_act = LeerTemperatura();
                 temp_celsius = (temperatura_act*0.02) - 273.15;
                 if(temp_celsius<temperatura_global){
                     temperatura_global = temp_celsius;
                     posicion = 3;
                 }
-                Retardo(2000);
+                moverOrigen();
+                Retardo(500);
             }
-            moverOrigen();
-            Retardo(500);
+            
             //una vez se ha terminado con la compribacion de temperatura se señala la bebida más fría
             switch(posicion){
                 case 0:
@@ -82,6 +91,8 @@ int main(void) {
             
             while(((PORTB>>PIN_PULSADOR)&1)==1);
             moverOrigen();
+            temperatura_global = 999999;
+            posicion = 0;
             //se vuelve a empezar
         }
         estado_ant = estado_act;

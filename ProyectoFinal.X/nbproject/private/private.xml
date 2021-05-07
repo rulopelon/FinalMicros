@@ -5,13 +5,13 @@
         <group>
             <file>file:/C:/Users/gonza/MPLABXProjects/FinalMicros/ProyectoFinal.X/I2cComunication.c</file>
             <file>file:/C:/Users/gonza/MPLABXProjects/FinalMicros/ProyectoFinal.X/ControlRobot.c</file>
-            <file>file:/C:/Users/gonza/MPLABXProjects/FinalMicros/ProyectoFinal.X/main.c</file>
             <file>file:/C:/Users/gonza/MPLABXProjects/FinalMicros/ProyectoFinal.X/Pines.h</file>
-            <file>file:/C:/Users/gonza/MPLABXProjects/FinalMicros/ProyectoFinal.X/Retardo.c</file>
+            <file>file:/C:/Users/gonza/MPLABXProjects/FinalMicros/ProyectoFinal.X/main.c</file>
             <file>file:/C:/Users/gonza/MPLABXProjects/FinalMicros/ProyectoFinal.X/Config.c</file>
+            <file>file:/C:/Users/gonza/MPLABXProjects/FinalMicros/ProyectoFinal.X/Retardo.c</file>
             <file>file:/C:/Users/gonza/MPLABXProjects/FinalMicros/ProyectoFinal.X/TempComunication.c</file>
             <file>file:/C:/Users/gonza/MPLABXProjects/FinalMicros/ProyectoFinal.X/ControlServos.c</file>
-            <file>file:/C:/Users/gonza/MPLABXProjects/FinalMicros/ProyectoFinal.X/ControlRobot.h</file>
+            <file>file:/C:/Users/gonza/MPLABXProjects/FinalMicros/ProyectoFinal.X/mainTemperatura.c</file>
         </group>
     </open-files>
 </project-private>

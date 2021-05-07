@@ -5,7 +5,7 @@
 #include "TempComunication.h"
 #include "Pines.h"
 
-int estado_act, estado_ant;// para guardar el estado de los pulsadores
+int estado_act, estado_ant,temp_celsius;// para guardar el estado de los pulsadores
 int temperatura_global = 0;
 int main(void){
     InicializacionPines();
@@ -17,6 +17,7 @@ int main(void){
             int temperatura_act = LeerTemperatura();
             if(temperatura_act!=-1){
                 temperatura_global = temperatura_act;
+                temp_celsius = (temperatura_act*0.02) - 273.15;
             }
         
         
